@@ -11,7 +11,7 @@ body{
     gap: 10px;
 }
 
-button{
+#choices button{
     font-size: 50px;
     border-radius: 60px;
     border: none;
@@ -22,4 +22,17 @@ button{
 .choice:hover{
     background-color: rgb(113, 175, 213);
     cursor: pointer;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+#reset{
+    background-color: rgb(255, 212, 212);
+    border: 2px dashed rgb(170, 19, 19);
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 5px;
+    color: rgb(170, 19, 19);
 }
