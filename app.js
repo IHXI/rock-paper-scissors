@@ -1,15 +1,19 @@
 /*-------------------------------- Constants --------------------------------*/
+const computerOptions = ['rock', 'paper', 'scissors']
+/*-------------------------------- Variables --------------------------------*/
+
+let userChoice = ''
+
+/*------------------------ Cached Element References ------------------------*/
+
+const choices = document.querySelector('#choices')
 const rock = document.querySelector('#rock')
 const paper = document.querySelector("#paper")
 const scissors = document.querySelector("#scissors")
 const reset = document.querySelector('#reset')
-/*-------------------------------- Variables --------------------------------*/
-let userChoice = ''
-let computerOptions = ['rock', 'paper', 'scissors']
-/*------------------------ Cached Element References ------------------------*/
-const choices = document.querySelector('#choices')
-console.log(choices)
+
 /*----------------------------- Event Listeners -----------------------------*/
+
 choices.addEventListener('click', function(event){
     userChoice = event.target.id
     if (userChoice === "rock"){
@@ -24,12 +28,16 @@ choices.addEventListener('click', function(event){
     }
     else if (userChoice === "scissors"){
         console.log("scissors")
-        console.log(computerOptions[Math.floor(Math.random() *2)])
         paper.classList.add('hidden')
         rock.classList.add('hidden') 
     }
+
+    let computerChoice = computerOptions[Math.floor(Math.random() *3)]
+    console.log(computerChoice)
 })
+
 /*-------------------------------- Functions --------------------------------*/
+
 reset.addEventListener('click', function(){
      paper.classList.remove('hidden')
      scissors.classList.remove('hidden')
