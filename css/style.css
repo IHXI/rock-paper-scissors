@@ -5,6 +5,7 @@ body{
     min-height: 100dvh;
     flex-direction: column;
     background-color: rgb(254, 248, 241);
+    color: crimson;
 }
 #choices{
     display: flex;
@@ -17,6 +18,8 @@ body{
     border: none;
     background-color: lightskyblue;
     padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 .choice:hover{
@@ -24,15 +27,16 @@ body{
     cursor: pointer;
 }
 
-.hidden{
-    visibility: hidden;
-}
-
 #reset{
     background-color: rgb(255, 212, 212);
-    border: 2px dashed rgb(170, 19, 19);
+    border: 2px dashed crimson;
     border-radius: 20px;
     font-weight: bold;
     padding: 5px;
-    color: rgb(170, 19, 19);
+    color: crimson;
+}
+
+#results {
+    min-height: 40px;
+    font-weight: bold;
 }
